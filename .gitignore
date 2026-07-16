@@ -1,6 +1,3 @@
-pets/.DS_Store
-pets/package-lock.json
-
 # Dependencies
 node_modules/
 
