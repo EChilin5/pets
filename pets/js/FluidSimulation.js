@@ -132,7 +132,7 @@ export class FluidSimulation {
     };
   }
 
- _setupInput() {
+_setupInput() {
   this.mouse = { x: 0, y: 0, velocityX: 0, velocityY: 0, moved: false };
 
   const canvas = this.canvas;
@@ -154,13 +154,12 @@ export class FluidSimulation {
 
   window.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
 
-  // Only listen on the canvas itself, and don't block scrolling
-  canvas.addEventListener(
+  window.addEventListener(
     "touchmove",
     (e) => {
       const touch = e.touches[0];
       onMove(touch.clientX, touch.clientY);
-      // no preventDefault — let the page scroll normally
+      // no preventDefault — lets the page scroll normally
     },
     { passive: true }
   );
