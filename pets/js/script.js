@@ -23,7 +23,7 @@ const config = {
   pressureDecay: 0.75,
   threshold: 1.0,
   edgeSoftness: 0.0,
-  inkColor: new THREE.Color("#6aa1f3"),
+  inkColor: new THREE.Color("#ffffff"), // was #6aa1f3
 };
 
 document.addEventListener("DOMContentLoaded", () => {

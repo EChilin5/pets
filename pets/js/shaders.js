@@ -60,6 +60,14 @@ export default {
     void main(){ gl_FragColor=value*texture2D(uTexture,vUv); }`,
   ],
 
+  // ── Display ──────────────────────────────────────────────────────────
+  // Mobile fix: the previous version used a hard step() cutoff when
+  // edgeSoftness was 0, so any pixel whose accumulated dye intensity
+  // landed even slightly below `threshold` (common on mobile due to lower
+  // half-float precision + sparser touchmove sampling than mousemove)
+  // was fully invisible, with zero antialiasing at the boundary.
+  // This version always uses smoothstep with a minimum soft edge, so the
+  // fluid degrades gracefully instead of disappearing outright.
   display: [
     v,
     `${p}
@@ -77,11 +85,16 @@ void main() {
 
   float intensity = length(col);
 
-  float mask = edgeSoftness > 0.
-    ? smoothstep(threshold - edgeSoftness * 0.5,
-                 threshold + edgeSoftness * 0.5,
-                 intensity)
-    : step(threshold, intensity);
+  // Always keep at least a small soft edge (0.05) even if edgeSoftness
+  // is passed in as 0, so low-precision mobile GPUs don't clip the
+  // effect to fully transparent.
+  float softness = max(edgeSoftness, 0.05);
+
+  float mask = smoothstep(
+    threshold - softness * 0.5,
+    threshold + softness * 0.5,
+    intensity
+  );
 
   vec3 finalColor = col * inkColor;
 
