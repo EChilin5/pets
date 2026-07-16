@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P.A.W.S</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+
+    <section class="hero">
+      <div class="header">
+        <canvas id="fluid"></canvas>
+
+        <div class="home-hero">
+          <div class="home-hero-text">
+            <p class="hero-heading">Security Clearance: Top Secret</p>
+            <h1 class="hero-title">Recruit Elite Field Agents</h1>
+            <div>
+              <p class="hero-description">
+                The P.A.W.S Agency (Paws and Whiskers Surveillance) needs operatives.
+                Browse our roster of highly trained feline and canine operatives.
+              </p>
+            </div>
+            <div>
+              <button class="hero-btn-agent" onclick="goToSection()">View Agent Roster</button>
+            </div>
+          </div>
+          <img class="spypetimg" src="./img/petspy.png" alt="spy pet" />
+        </div>
+      </div>
+    </section>
+
+    <section class="pets">
+      <div class="pet-container">
+
+        <!-- Card 1 -->
+        <div class="pet-item">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-header-top">🐕 K9</div>
+              <div class="card-header-bottom">CodeName: PRIME TRACKER</div>
+              <img class="card-img" src="./images/husky.png" alt="Charlie the Husky" />
+            </div>
+            <div class="card-bottom">
+              <div class="card-bottom-name">Charlie</div>
+              <div class="card-bottom-breed">Husky</div>
+              <div class="card-bottom-specialty">Specialty</div>
+              <div class="card-bottom-info">Scent Tracking & Evidence Recovery</div>
+              <div class="card-bottom-button">
+                <button class="card-btn-pet" onclick="window.open('details1.html', '_self')">Recruit Prime Tracker</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="pet-item">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-header-top">🐕 K9</div>
+              <div class="card-header-bottom">CodeName: Golden Thunder</div>
+              <img class="card-img" src="./images/german shepard.png" alt="Max the German Shepherd" />
+            </div>
+            <div class="card-bottom">
+              <div class="card-bottom-name">Max</div>
+              <div class="card-bottom-breed">German Shepherd</div>
+              <div class="card-bottom-specialty">Specialty</div>
+              <div class="card-bottom-info">Explosive Detection & Coastal Infiltration</div>
+              <div class="card-bottom-button">
+                <button class="card-btn-pet"  onclick="window.open('details2.html', '_self')">Recruit Golden Thunder</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="pet-item">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-header-top">🐕 K9</div>
+              <div class="card-header-bottom">CodeName: ARCTIC GHOST</div>
+              <img class="card-img" src="./images/dalmatian.png" alt="Rocky the Dalmatian" />
+            </div>
+            <div class="card-bottom">
+              <div class="card-bottom-name">Rocky</div>
+              <div class="card-bottom-breed">Dalmatian</div>
+              <div class="card-bottom-specialty">Specialty</div>
+              <div class="card-bottom-info">Cold Weather Ops & Endurance Missions</div>
+              <div class="card-bottom-button">
+                <button class="card-btn-pet"  onclick="window.open('details3.html', '_self')">Recruit Arctic Ghost</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="pet-item">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-header-top">🐕 K9</div>
+              <div class="card-header-bottom">CodeName: Tidal Force</div>
+              <img class="card-img" src="./images/chihuaha.png" alt="Cooper the Chihuahua" />
+            </div>
+            <div class="card-bottom">
+              <div class="card-bottom-name">Cooper</div>
+              <div class="card-bottom-breed">Chihuahua</div>
+              <div class="card-bottom-specialty">Specialty</div>
+              <div class="card-bottom-info">Water Rescue & Maritime Surveillance</div>
+              <div class="card-bottom-button">
+                <button class="card-btn-pet" onclick="window.open('details4.html', '_self')">Recruit Tidal Force</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="pet-item">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-header-top">🐱 Feline</div>
+              <div class="card-header-bottom">CodeName: SHADOW WHISKER</div>
+              <img class="card-img" src="./images/domestic_short_hair.png" alt="Luna the Domestic Short Hair" />
+            </div>
+            <div class="card-bottom">
+              <div class="card-bottom-name">Luna</div>
+              <div class="card-bottom-breed">Domestic Short Hair</div>
+              <div class="card-bottom-specialty">Specialty</div>
+              <div class="card-bottom-info">Silent Surveillance & Rooftop Navigation</div>
+              <div class="card-bottom-button">
+                <button class="card-btn-pet"  onclick="window.open('details5.html', '_self')">Recruit Shadow Whisker</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="pet-item">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-header-top">🐱 Feline</div>
+              <div class="card-header-bottom">CodeName: SAPPHIRE EYES</div>
+              <img class="card-img" src="./images/Maine_Coon.png" alt="Mia the Maine Coon" />
+            </div>
+            <div class="card-bottom">
+              <div class="card-bottom-name">Mia</div>
+              <div class="card-bottom-breed">Maine Coon</div>
+              <div class="card-bottom-specialty">Specialty</div>
+              <div class="card-bottom-info">Psychological Ops & Distraction Tactics</div>
+              <div class="card-bottom-button">
+                <button class="card-btn-pet"  onclick="window.open('details6.html', '_self')">Recruit Sapphire Eyes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="pet-item">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-header-top">🐱 Feline</div>
+              <div class="card-header-bottom">CodeName: COPPER STRIKE</div>
+              <img class="card-img" src="./images/Siamese.webp" alt="Olive the Siamese" />
+            </div>
+            <div class="card-bottom">
+              <div class="card-bottom-name">Olive</div>
+              <div class="card-bottom-breed">Siamese</div>
+              <div class="card-bottom-specialty">Specialty</div>
+              <div class="card-bottom-info">Urban Reconnaissance & Asset Protection</div>
+              <div class="card-bottom-button">
+                <button class="card-btn-pet"  onclick="window.open('details7.html', '_self')">Recruit Copper Strike</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="pet-item">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-header-top">🐕 K9</div>
+              <div class="card-header-bottom">CodeName: Mr Flufffykins</div>
+              <img class="card-img" src="./images/goldenthunder.jpg" alt="Carl the Golden Retriever" />
+            </div>
+            <div class="card-bottom">
+              <div class="card-bottom-name">Carl</div>
+              <div class="card-bottom-breed">Golden Retriever</div>
+              <div class="card-bottom-specialty">Specialty</div>
+              <div class="card-bottom-info">Silent Surveillance & Rooftop Navigation</div>
+              <div class="card-bottom-button">
+                <button class="card-btn-pet"  onclick="window.open('details8.html', '_self')">Recruit Mr Flufffykins</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="pet-item">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-header-top">🐕 K9</div>
+              <div class="card-header-bottom">CodeName: Cobra</div>
+              <img class="card-img" src="./images/spypet.webp" alt="Paco the Labrador" />
+            </div>
+            <div class="card-bottom">
+              <div class="card-bottom-name">Paco</div>
+              <div class="card-bottom-breed">Labrador</div>
+              <div class="card-bottom-specialty">Specialty</div>
+              <div class="card-bottom-info">Aerial Surveillance & Coastal Infiltration</div>
+              <div class="card-bottom-button">
+                <button class="card-btn-pet"  onclick="window.open('details9.html', '_self')">Recruit Cobra</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="ball">
+      <!-- ✅ position:relative makes this the boundary for the particle canvas -->
+      <div class="ball-room" style="position:relative; min-height:500px; overflow:hidden;">
+
+        <!-- ✅ position:absolute confines particles to this section only -->
+        <div id="particle-canvas" style="position:absolute; inset:0; z-index:0; pointer-events:none;"></div>
+
+        <!-- ✅ z-index:1 keeps text above the particles -->
+        <div class="ball-room-header" style="position:relative; z-index:1;">
+          <p>Paws and Whiskers Surveillance</p>
+          <h1>Adopt a <br /> Secret Agent!</h1>
+          <button>Adopt Now</button>
+        </div>
+
+      </div>
+    </section>
+
+    <script type="module" src="./js/script.js"></script>
+
+  </body>
+</html>

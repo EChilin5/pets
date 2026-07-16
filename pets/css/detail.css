@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.pet-details-header{
+    background-color: black;
+    color: white;
+    padding:5px;
+}
+.pet-details-container{
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: row;
+    /* background-color: #1d293d; */
+    color: white;
+    background-color: #000000;
+}
+
+.pet-details-main{
+    text-align: center;
+}
+
+.pet-details-main img{
+    width:600px;
+    max-width: 100%;
+    height: 70vh;
+    padding:10px
+}
+
+.pet-details-adopt{
+    font-size: 36px;
+    padding:5px;
+}
+.pet-details-call{
+    font-size: 24px;
+    padding:5px;
+}
+
+.container {
+  height: 100%;
+    -webkit-overflow-scrolling: touch;
+    color:white;
+     overflow-y: scroll; /* or overflow: auto, whatever you're already using */
+  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;  /* IE and old Edge */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, newer Edge */
+}
+
+
+/* ////////////////////////////////////////////////////////////////// */
+
+.pet-level{
+         background-color: white;
+    border: 1px solid white;
+    padding:10px;
+    width: 600px;
+    max-width: 100%;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.pet-level-header{
+    background-color: #291f2e;
+    border-bottom: 1px solid red;
+    padding:10px;
+    margin-bottom: 10px;
+}
+
+.pet-level-header-level{
+    background-color: red;
+    padding:10px;
+    border-radius: 5px;
+    width:fit-content;
+}
+
+.pet-level-header-name{
+    font-size:24px;
+    font-weight: 500;
+}
+
+.pet-level-header-location{
+    font-weight: 200;
+}
+
+.pet-level-list{
+    background-color: #151f34;
+    border-left: 1px solid orange;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.pet-level-list-type{
+    font-weight: 200;
+    color: #74767d;
+}
+
+.pet-level-list-desc{
+    font-weight: 500;
+}
+
+/* /////////////////pet-intellegence///////////////////////////////// */
+.pet-intelligence{
+    background-color: white;
+    border: 1px solid white;
+    padding:10px;
+    margin:10px;
+    width: 600px;
+    max-width: 100%;
+}
+
+.pet-intelligence-title{
+    color:#e1690f;
+    padding:10px;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: 500;
+    
+}
+
+.pet-intelligence-cell{
+    background-color: #1f1f23;
+
+    border-left: 1px solid orange;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+.pet-intelligence-cell-title{
+
+    color:#a45b10;
+    padding-left:3px;
+    padding-right:3px;
+    font-weight: 500;
+}
+
+
+/* /////////////////Pet behavior //////////////////////// */
+
+.pet-behavior{
+      /* background-color: #1d293d; */
+    border: 1px solid white;
+    padding:10px;
+    background-color: white;
+    
+    width: 600px;
+    max-width: 100%;
+    margin:10px;
+    
+}
+
+.pet-behavior-title{
+    color:#e17100;
+    padding-left:3px;
+    padding-right:3px;
+    font-weight: 500; 
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-size: 24px;
+}
+
+.pet-behavior-list{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pet-behavior-item{
+    margin-right:10px;
+    background-color: #443731;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding:5px;
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+/* Responsive: tablet / small desktop */
+/* ////////////////////////////////////////////////////////////////// */
+@media (max-width: 700px) {
+    .pet-details-main img{
+        width: 400px;
+        height: 50vh;
+    }
+
+    .pet-level,
+    .pet-intelligence,
+    .pet-behavior{
+        width: 100%;
+    }
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+/* Responsive: mobile */
+/* ////////////////////////////////////////////////////////////////// */
+@media (max-width: 600px) {
+    .pet-details-container{
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .pet-details-main img{
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .pet-details-adopt{
+        font-size: 28px;
+    }
+
+    .pet-details-call{
+        font-size: 20px;
+    }
+
+    .container{
+        height: auto;
+    }
+
+    .pet-level,
+    .pet-intelligence,
+    .pet-behavior{
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .pet-level-header-name{
+        font-size: 20px;
+    }
+
+    .pet-intelligence-title,
+    .pet-behavior-title{
+        font-size: 20px;
+    }
+}
