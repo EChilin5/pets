@@ -132,48 +132,37 @@ export class FluidSimulation {
     };
   }
 
-  _setupInput() {
+ _setupInput() {
   this.mouse = { x: 0, y: 0, velocityX: 0, velocityY: 0, moved: false };
 
   const canvas = this.canvas;
 
   const onMove = (x, y) => {
     const rect = canvas.getBoundingClientRect();
-
     const localX = x - rect.left;
     const localY = y - rect.top;
 
-    if (
-      localX < 0 ||
-      localY < 0 ||
-      localX > rect.width ||
-      localY > rect.height
-    )
+    if (localX < 0 || localY < 0 || localX > rect.width || localY > rect.height)
       return;
 
-    this.mouse.velocityX =
-      (localX * this.dpr - this.mouse.x) * this.config.forceStrength;
-
-    this.mouse.velocityY =
-      (localY * this.dpr - this.mouse.y) * this.config.forceStrength;
-
+    this.mouse.velocityX = (localX * this.dpr - this.mouse.x) * this.config.forceStrength;
+    this.mouse.velocityY = (localY * this.dpr - this.mouse.y) * this.config.forceStrength;
     this.mouse.x = localX * this.dpr;
     this.mouse.y = localY * this.dpr;
-
     this.mouse.moved = true;
   };
 
-  window.addEventListener("mousemove", (e) =>
-    onMove(e.clientX, e.clientY)
-  );
+  window.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
 
-  window.addEventListener(
+  // Only listen on the canvas itself, and don't block scrolling
+  canvas.addEventListener(
     "touchmove",
     (e) => {
-      e.preventDefault();
-      onMove(e.touches[0].clientX, e.touches[0].clientY);
+      const touch = e.touches[0];
+      onMove(touch.clientX, touch.clientY);
+      // no preventDefault — let the page scroll normally
     },
-    { passive: false }
+    { passive: true }
   );
 }
 
