@@ -23,7 +23,7 @@
               </p>
             </div>
             <div>
-              <button class="hero-btn-agent" onclick="goToSection()">View Agent Roster</button>
+              <button class="hero-btn-agent" onclick="document.getElementById('pet-group').scrollIntoView({behavior: 'smooth'})">View Agent Roster</button>
             </div>
           </div>
           <img class="spypetimg" src="./img/petspy.png" alt="spy pet" />
@@ -35,7 +35,7 @@
       <div class="pet-container">
 
         <!-- Card 1 -->
-        <div class="pet-item">
+        <div class="pet-item" id="pet-group">
           <div class="card">
             <div class="card-header">
               <div class="card-header-top">🐕 K9</div>
